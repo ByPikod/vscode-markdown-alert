@@ -46,6 +46,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "markdown-it": "^13.0.2"
+    "markdown-it": "^13.0.2",
+    "markdown-it-github-alert": "^1.0.0"
   }
 }
