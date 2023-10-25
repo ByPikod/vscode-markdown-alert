@@ -12,10 +12,20 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
+    "languages": [
       {
-        "command": "vscode-markdown-alert.helloWorld",
-        "title": "Hello World"
+        "id": "markdown",
+        "extensions": [
+          ".md",
+          ".markdown",
+          ".mdown",
+          ".mkdn",
+          ".mkd",
+          ".mdwn",
+          ".mdtxt",
+          ".mdtext",
+          ".Rmd"
+        ]
       }
     ]
   },
@@ -27,11 +37,10 @@
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "lint": "eslint src --ext ts"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.2",
+    "@types/markdown-it": "^13.0.5",
     "@types/node": "18.x",
     "@types/vscode": "^1.83.0",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
@@ -39,7 +48,6 @@
     "@vscode/test-electron": "^2.3.4",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
-    "mocha": "^10.2.0",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
@@ -47,6 +55,6 @@
   },
   "dependencies": {
     "markdown-it": "^13.0.2",
-    "markdown-it-github-alert": "^1.0.0"
+    "markdown-it-github-alert": "^1.0.1"
   }
 }
