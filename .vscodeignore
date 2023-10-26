@@ -3,11 +3,16 @@
 out/**
 node_modules/**
 src/**
+notebook/**
+dist-notebook/**
 .gitignore
 .yarnrc
 webpack.config.js
+web.webpack.config.js
+icon.png
 vsc-extension-quickstart.md
 **/tsconfig.json
 **/.eslintrc.json
 **/*.map
 **/*.ts
+esbuild-notebook.js
