@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "name": "vscode-markdown-alert",
-  "displayName": "Markdown Alert Syntax for Github",
+  "displayName": "Markdown Preview for Github Alerts",
   "description": "VS Code Github Alert Syntax for Markdown Previews",
   "publisher": "Yahya Batulu",
   "license": "MIT",
@@ -30,6 +30,14 @@
     "plugin",
     "markdown-it"
   ],
+  "homepage": "https://github.com/ByPikod/vscode-markdown-alert",
+  "bugs": {
+    "url": "https://github.com/ByPikod/vscode-markdown-alert/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ByPikod/vscode-markdown-alert"
+  },
   "activationEvents": [],
   "contributes": {
     "markdown.markdownItPlugins": true,
