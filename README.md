@@ -1,71 +1,36 @@
-# vscode-markdown-alert README
+# VS Code Markdown Alert
 
-This is the README for your extension "vscode-markdown-alert". After writing up a brief description, we recommend including the following sections.
+This is a VS Code extension that allows you to preview GitHub's alert syntax for markdown files. This feature first introduced in [this discussion post](https://github.com/orgs/community/discussions/16925). And this extension is the first implementation of this feature in VS Code.
 
-## Features
+This code,
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+```MD
+> [!NOTE]
+> Hello, world!
+```
 
-For example if there is an image subfolder under your extension project workspace:
+should look like this,
 
-\!\[feature X\]\(images/feature-x.png\)
+![Exmaple](promotions/example.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Here is an example how it looks like in VS Code,
 
-## Requirements
+![Exmaple](promotions/preview.png)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## How does it work?
 
-## Extension Settings
+For those who are interested in how this extension works, here is a brief explanation.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+VS Code uses a javascript library named [markdown-it](https://github.com/markdown-it/markdown-it) to render markdown files. This library allows you to add custom rules to the markdown parser. This extension adds a custom rule to the parser to render GitHub's alert syntax using [markdown-it-github-alert](https://github.com/ByPikod/markdown-it-github-alert) plugin of Markdown-it which is also written by me.
 
-For example:
+For further information, you can check out the source code of this extension and the plugin.
 
-This extension contributes the following settings:
+## Copyright
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+his project is licensed under the terms of the MIT License.
 
-## Known Issues
+You are free to use this project in compliance with the MIT License. If you decide to use, modify, or redistribute this software, you must include a copy of the original license and copyright notice in all copies or substantial portions of the software.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+For more information about the MIT License, visit: [MIT License](LICENSE).
 
 **Enjoy!**
