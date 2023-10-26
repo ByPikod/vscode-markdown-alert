@@ -3,7 +3,7 @@
   "name": "vscode-markdown-alert",
   "displayName": "Markdown Preview for Github Alerts",
   "description": "VS Code Github Alert Syntax for Markdown Previews",
-  "publisher": "Yahya Batulu",
+  "publisher": "yahyabatulu",
   "license": "MIT",
   "icon": "icon.png",
   "main": "./dist/index.js",
