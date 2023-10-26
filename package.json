@@ -1,41 +1,58 @@
 {
-  "name": "vscode-markdown-alert",
-  "displayName": "vscode-markdown-alert",
-  "description": "VS Code Github Alert Syntax for Markdown Previews",
   "version": "0.0.1",
+  "name": "vscode-markdown-alert",
+  "displayName": "Markdown Alert Syntax for Github",
+  "description": "VS Code Github Alert Syntax for Markdown Previews",
+  "publisher": "Yahya Batulu",
+  "license": "MIT",
+  "icon": "icon.png",
+  "main": "./dist/index.js",
+  "browser": "./dist/web/index.js",
+  "author": {
+    "name": "Yahya Batulu",
+    "email": "admin@yahyabatulu.com",
+    "url": "https://www.yahyabatulu.com"
+  },
   "engines": {
     "vscode": "^1.83.0"
   },
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "markdown",
+    "alert",
+    "github",
+    "syntax",
+    "preview",
+    "vscode",
+    "extension",
+    "plugin",
+    "markdown-it"
+  ],
   "activationEvents": [],
-  "main": "./dist/extension.js",
   "contributes": {
-    "languages": [
+    "markdown.markdownItPlugins": true,
+    "notebookRenderer": [
       {
-        "id": "markdown",
-        "extensions": [
-          ".md",
-          ".markdown",
-          ".mdown",
-          ".mkdn",
-          ".mkd",
-          ".mdwn",
-          ".mdtxt",
-          ".mdtext",
-          ".Rmd"
-        ]
+        "id": "bypikod.markdown-it-alert-extension",
+        "displayName": "Markdown IT Alert Renderer",
+        "entrypoint": {
+          "extends": "vscode.markdown-it-renderer",
+          "path": "./dist-notebook/notebook.js"
+        }
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run package",
+    "clean": "rimraf ./dist ./dist-notebook ./out ./out-test",
+    "vscode:prepublish": "npm run clean && npm run package && npm run package-web && npm run package-notebook",
     "compile": "webpack",
     "watch": "webpack --watch",
+    "watch-web": "webpack --watch --config ./web.webpack.config.js",
     "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
+    "package-web": "webpack --mode production --devtool hidden-source-map --config ./web.webpack.config.js",
+    "package-notebook": "node ./esbuild-notebook",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts"
   },
@@ -43,11 +60,14 @@
     "@types/markdown-it": "^13.0.5",
     "@types/node": "18.x",
     "@types/vscode": "^1.83.0",
+    "@types/vscode-notebook-renderer": "^1.72.2",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "@vscode/test-electron": "^2.3.4",
+    "esbuild": "^0.19.5",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
+    "rimraf": "^5.0.5",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
