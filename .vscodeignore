@@ -9,7 +9,6 @@ dist-notebook/**
 .yarnrc
 webpack.config.js
 web.webpack.config.js
-icon.png
 vsc-extension-quickstart.md
 **/tsconfig.json
 **/.eslintrc.json
