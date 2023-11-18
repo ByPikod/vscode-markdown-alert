@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.0.3",
   "name": "vscode-markdown-alert",
   "displayName": "Markdown Preview for Github Alerts",
   "description": "VS Code Github Alert Syntax for Markdown Previews",
@@ -86,6 +86,6 @@
   },
   "dependencies": {
     "markdown-it": "^13.0.2",
-    "markdown-it-github-alert": "^1.0.4"
+    "markdown-it-github-alert": "^1.0.5"
   }
 }

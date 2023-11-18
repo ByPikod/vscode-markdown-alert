@@ -3,12 +3,14 @@
     border-left: 0.25rem solid;
     padding-bottom: 0px;
     padding-top: 0px;
+    border-color: var(--border-color);
 }
 
 .markdown-alert > span {
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: var(--border-color);
 }
 
 .markdown-alert .markdown-alert-icon {
@@ -18,15 +20,20 @@
 
 .markdown-alert.note {
     --border-color: #539BF5;
-    border-color: var(--border-color);
 }
 
 .markdown-alert.warning {
     --border-color: #C69026;
-    border-color: var(--border-color)
 }
 
 .markdown-alert.important {
     --border-color: #986EE2;
-    border-color: var(--border-color);
+}
+
+.markdown-alert.caution {
+    --border-color: #E5534B;
+}
+
+.markdown-alert.tip {
+    --border-color: #57AB5A;
 }

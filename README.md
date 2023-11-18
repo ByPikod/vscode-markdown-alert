@@ -11,11 +11,11 @@ This code,
 
 should look like this,
 
-![Exmaple](promotions/example.png)
+![Example](promotions/example.png)
 
 Here is an example how it looks like in VS Code,
 
-![Exmaple](promotions/preview.png)
+![Example](promotions/preview.png)
 
 ## How does it work?
 
@@ -27,7 +27,7 @@ For further information, you can check out the source code of this extension and
 
 ## Copyright
 
-his project is licensed under the terms of the MIT License.
+This project is licensed under the terms of the MIT License.
 
 You are free to use this project in compliance with the MIT License. If you decide to use, modify, or redistribute this software, you must include a copy of the original license and copyright notice in all copies or substantial portions of the software.
 
