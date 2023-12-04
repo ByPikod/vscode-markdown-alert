@@ -2,7 +2,9 @@
 
 This is a VS Code extension that allows you to preview GitHub's alert syntax for markdown files. This feature first introduced in [this discussion post](https://github.com/orgs/community/discussions/16925). And this extension is the first implementation of this feature in VS Code.
 
-This code,
+You can install the extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=yahyabatulu.vscode-markdown-alert).
+
+Syntax below,
 
 ```MD
 > [!NOTE]
@@ -11,9 +13,10 @@ This code,
 
 should look like this,
 
-![Example](promotions/example.png)
+> [!NOTE]
+> Hello, world!
 
-Here is an example how it looks like in VS Code,
+And this it looks like in VS Code via this extension,
 
 ![Example](promotions/preview.png)
 
