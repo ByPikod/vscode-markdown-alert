@@ -28,6 +28,20 @@ VS Code uses a javascript library named [markdown-it](https://github.com/markdow
 
 For further information, you can check out the source code of this extension and the plugin.
 
+## Contribute
+
+Contribution
+
+We welcome and appreciate contributions from the community! To contribute to this project, follow these steps:
+
+* Fork the repository.
+* Create a new branch for your feature or bug fix.
+* Make your changes and ensure they pass any existing tests.
+* Open a pull request with a clear title and description.
+* Participate in the code review process.
+
+Thank you for helping make this project better!
+
 ## Copyright
 
 This project is licensed under the terms of the MIT License.
